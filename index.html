@@ -1,0 +1,46 @@
+<% extends './skins/app.html' %>
+
+<% subskin head %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="<% resourceHref <% appId %> %>/javascript/box2d.js"></script>
+
+<script>
+// used by box2d
+function extend(a, b) {
+    for(var c in b) {
+        a[c] = b[c];
+    }
+}
+</script>
+
+<% subskin content %>
+<canvas id="jsgamecanvas"></canvas>
+   <h3>Collect stars.</h3>
+   <h3>Drag a ship in a direction and release to launch.</h3>
+   <h3>Red beetle ships are yours.</h3>
+ <h1>Planetary</h1>
+ <a href=http://github.com/oberhamsi/planetary-gamejs>@github</a>
+ <!--
+   <ul style="list-style-type:none;">
+      <li>29 Jan 2011</li
+      <li>Design & Graphics -- <a href=http://www.lostgarden.com/>Danc</a>
+      <li>Code -- <a href="http://nekapuzer.at">Oberhamsi</a>
+      <li>Powered by <a href="http://gamejs.org">GameJs</a>
+   </ul>
+   </p>
+   -->
+
+   <script type="text/javascript">
+   (function() {
+     if (document.location.href.indexOf('localhost') != -1) return;
+
+     var stss = document.createElement('script');
+     stss.type = 'text/javascript';
+     stss.async = true;
+     stss.src = 'http://stats.nekapuzer.at/hit/?referer=' + escape(document.referrer) +
+          '&site=rtsimple-game' +
+          '&random=' + (new Date()).getTime();
+     var s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(stss, s);
+   })();
+    </script>
