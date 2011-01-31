@@ -1,8 +1,8 @@
 Planetary
 ===============================
 
-Play: http://gamejs.org/apps/planetary
-Code: http://github.com/oberhamsi/telemachus-gamejs/
+  * Play: http://gamejs.org/apps/planetary
+  * Code: http://github.com/oberhamsi/telemachus-gamejs/
 
 Box2d
 -------
@@ -11,10 +11,10 @@ The game interacts with the box2d code via my custom, small box2d.js module. Thi
 
 The ship sprite is the only moving sprite and therefor the only type of object  that must update its position according to the box2d simulation. It does so by reading the appropriate values from the box2d body it has attached:
 
-   // in Ship.prototype.update
-   var t = this.b2body.m_xf;
-   this.rect.left = t.position.x;
-   this.rect.top = t.position.y;
+    // in Ship.prototype.update
+    var t = this.b2body.m_xf;
+    this.rect.left = t.position.x;
+    this.rect.top = t.position.y;
 
 Compared to the other sprites, ships interact a lot with the physics stuff. For example, I forcefully stop a Ship once it moves really slowly (to avoid boring the player).
 
