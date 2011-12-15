@@ -4,7 +4,7 @@ Planetary
 A Gamejs.org application built for the Global Game Jam 2011.
 
   * Play: <http://gamejs.org/apps/planetary>
-  * Code: <http://github.com/oberhamsi/telemachus-gamejs/>
+  * Code: <https://github.com/oberhamsi/planetary-gamejs/>
 
 Box2d
 -------
